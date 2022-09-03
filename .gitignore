@@ -25,3 +25,7 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+.flutter-plugins-dependencies 2
+.flutter-plugins 2
+ios/Flutter/flutter_export_environment 3.sh
+.gitignore

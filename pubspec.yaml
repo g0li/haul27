@@ -40,6 +40,8 @@ dependencies:
   google_fonts: ^3.0.1
   #animation
   rive: ^0.9.1
+  #images
+  flutter_svg: ^1.1.4
 dev_dependencies:
   flutter_test:
     sdk: flutter

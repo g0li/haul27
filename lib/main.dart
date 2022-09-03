@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haul27/constants/app_colors.dart';
 import 'package:haul27/pages/login_page.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: kAscentLightPrimary,
       ),
       home: const LoginPage(),
     );
