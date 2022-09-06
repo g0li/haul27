@@ -4,7 +4,7 @@ import 'package:rive/rive.dart';
 
 import '../widgets/haul_button.dart';
 import '../widgets/haul_text_button.dart';
-import 'home_page.dart';
+import 'home_navigator_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -48,8 +48,8 @@ class LoginPage extends StatelessWidget {
             width: double.maxFinite,
             child: HaulButton(
               child: const Text('Sign in with Email'),
-              onPressed: () => Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => const HomePage())),
+              onPressed: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => const HomeNavigatorPage())),
             ),
           ),
         ],

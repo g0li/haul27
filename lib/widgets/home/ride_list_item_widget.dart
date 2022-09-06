@@ -3,48 +3,55 @@ import 'package:haul27/constants/app_colors.dart';
 import 'package:haul27/widgets/haul_button.dart';
 
 import '../../constants/app_textstyles.dart';
+import '../../pages/ride_details_page.dart';
 
 class RidesListItemWidget extends StatelessWidget {
   const RidesListItemWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-      decoration: const BoxDecoration(
-          color: kGreyscaleLightWhite,
-          borderRadius: BorderRadius.vertical(bottom: Radius.circular(8))),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(
-            height: 300,
-            child: Stack(
-              children: const [
-                _ImagePagerWidget(),
-                _FavouriteButton(),
-                _DistanceIndicator(),
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const RideDetailsPage()));
+      },
+      child: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+        decoration: const BoxDecoration(
+            color: kGreyscaleLightWhite,
+            borderRadius: BorderRadius.vertical(bottom: Radius.circular(8))),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              height: 300,
+              child: Stack(
+                children: const [
+                  _ImagePagerWidget(),
+                  _FavouriteButton(),
+                  _DistanceIndicator(),
+                ],
+              ),
+            ),
+            const SizedBox(height: 12),
+            const _ParticipantsWidget(),
+            const SizedBox(height: 12),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  child: Text(
+                    'Umberkhind Grand Frondo',
+                    style: kSubTitle2,
+                  ),
+                ),
+                HaulButton(child: const Text('join'), onPressed: () {})
               ],
             ),
-          ),
-          const SizedBox(height: 12),
-          const _ParticipantsWidget(),
-          const SizedBox(height: 12),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                child: Text(
-                  'Umberkhind Grand Frondo',
-                  style: kSubTitle2,
-                ),
-              ),
-              HaulButton(child: const Text('join'), onPressed: () {})
-            ],
-          ),
-          const SizedBox(height: 12),
-        ],
+            const SizedBox(height: 12),
+          ],
+        ),
       ),
     );
   }
