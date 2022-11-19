@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 // import '../../../services/local/shared_preferences_service.dart';
@@ -15,7 +16,7 @@ abstract class BaseRemoteSource {
       receiveDataWhenStatusError: true,
     ),
   );
-
+  FirebaseAuth auth = FirebaseAuth.instance;
   Future<Response<T>> callApiWithErrorParser<T>(Future<Response<T>> api) async {
     try {
       Response<T> response = await api;

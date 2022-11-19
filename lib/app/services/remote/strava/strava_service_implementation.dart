@@ -1,7 +1,4 @@
-import 'dart:developer';
-
 import 'package:dartz/dartz.dart';
-import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:haul27/app/common/api/endpoints.dart';
 import 'package:haul27/app/common/api/haul_error.dart';

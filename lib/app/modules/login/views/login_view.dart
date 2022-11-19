@@ -17,10 +17,14 @@ class LoginView extends GetView<LoginController> {
         child: Column(
           children: [
             Obx(() {
-              return Text(controller.athlete.value.athlete?.firstname ?? '');
+              return Text(
+                  controller.stravaAthlete.value.athlete?.firstname ?? '');
+            }),
+            Obx(() {
+              return Text(controller.isAuthenticated.toString());
             }),
             ElevatedButton(
-              child: Text('Connect with Strava'),
+              child: const Text('Connect with Strava'),
               onPressed: () {
                 controller.authorize();
               },

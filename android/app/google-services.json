@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "347175533399",
+    "project_id": "haul27-39510",
+    "storage_bucket": "haul27-39510.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347175533399:android:0dd20f06caf2be4a055c12",
+        "android_client_info": {
+          "package_name": "com.example.haul27"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347175533399-e7ai3v8k1f3v0rp9cn5fi5n63t0nnmrt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADw2_lQNwdbc--OVB8zp69ynlloqJRj40"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "347175533399-e7ai3v8k1f3v0rp9cn5fi5n63t0nnmrt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
