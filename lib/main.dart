@@ -13,6 +13,11 @@ void main() async {
       title: "Haul27",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
+      theme: ThemeData.from(
+              colorScheme: const ColorScheme.highContrastLight(
+                  primary: Color(0xFFFF6B00)))
+          .copyWith(
+              appBarTheme: const AppBarTheme(backgroundColor: Colors.black)),
       initialBinding: LoginBinding(),
     ),
   );
