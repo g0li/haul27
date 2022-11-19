@@ -1,23 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:haul27/constants/app_colors.dart';
+import 'package:get/get.dart';
+import 'package:haul27/app/modules/login/bindings/login_binding.dart';
 
-import 'pages/login_page.dart';
+import 'app/routes/app_pages.dart';
 
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Haul27',
-      theme: ThemeData(
-        primaryColor: kAscentLightPrimary,
-      ),
-      home: const LoginPage(),
-    );
-  }
+  runApp(
+    GetMaterialApp(
+      title: "Haul27",
+      initialRoute: AppPages.INITIAL,
+      getPages: AppPages.routes,
+      initialBinding: LoginBinding(),
+    ),
+  );
 }
