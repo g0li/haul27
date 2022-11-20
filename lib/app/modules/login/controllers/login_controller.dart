@@ -1,8 +1,8 @@
 import 'dart:developer';
 
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:haul27/app/models/strava/strava_user_model.dart';
+import 'package:haul27/app/routes/app_pages.dart';
 import 'package:haul27/app/services/local/secure_storage/auth/login_secured_service.dart';
 import 'package:haul27/app/services/remote/firebase_auth/anonymous_login_service.dart';
 import 'package:haul27/app/services/remote/strava/strava_service.dart';
@@ -87,16 +87,9 @@ class LoginController extends GetxController {
     });
     if (fbUserExists == true && athleteExists == true) {
       isAuthenticated(true);
+      Get.offAllNamed(Routes.HOME);
     } else {
       isAuthenticated(false);
     }
-    log('fbUserExists ${fbUserExists.toString()}');
-    log('athleteExists ${athleteExists.toString()}');
-  }
-
-  @override
-  void onInit() {
-    super.onInit();
-    checkIfAuthentic();
   }
 }
